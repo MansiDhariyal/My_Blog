@@ -1,0 +1,15 @@
+<%- include('partials/header')-%>
+  <h1>HOME</h1>
+  <p>
+    <%=para1%>
+  </p>
+  <%myposts.forEach(function(post){%>
+    <h1>
+      <%=post.title%>
+    </h1>
+    <p>
+      <%=post.body.substring(0,100)+" ..." %><a href="/posts/<%=post.title%>">Read More</a>
+    </p>
+    <%});%>
+    <button type="button" onclick="location.href='compose'" class="btn btn-primary">CLICK HERE TO COMPOSE</button>
+      <%- include('partials/footer')-%>
